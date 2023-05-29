@@ -38,9 +38,9 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN}}
+          aws-access-key-id: ASIATNTDJLQZBCXBLJOH
+          aws-secret-access-key: 3qcy4QDtdL73Gwjy9TRcFRXFS7XUAGSyObvhqs9s
+          aws-session-token: FwoGZXIvYXdzEFEaDIt998WyKNsW4qleyiLJAdl0/G7uJ5r5k59bd17xO2bIpsDqQSDckGpcbV3OUQjEBtioZL80YPsjkyGZamwTl6dhHwfxaUV5nOCunGEY7o6ophQPttWwCGeaLzpOvI+ACIe/RYg1vglRIMoHojvn/2sloooGbEC4TeSE6T/MP32bECuHIATnFDKORlfTPuyToBMfC+rcN2mXusliKTgkoARJo8i8hJiir4YEVy3D8gqXEJJ/FWva5oUpxcqFAYC0HnPSytO5C8IlKi6iLIBNMPi50pOjpZ1P7CjLgNOjBjItdyIllQdYNWl82oPEl2XlNH6LuCUSyNKDMOdENEiMSbm2S1WPj2zWZRxDnOu3
           aws-region: us-east-1 
           
       - name: Pytest
@@ -51,6 +51,11 @@ jobs:
       - name: flake8
         run: |
           source env/bin/activate
+          flake8 Parcial3_BigData/Parcial3-BigData-main/Punto_Productores/productor1.py
+          flake8 Parcial3_BigData/Parcial3-BigData-main/Punto_Productores/consumidorInferior.py
+          flake8 Parcial3_BigData/Parcial3-BigData-main/Punto_Productores/productor2.py
+          flake8 Parcial3_BigData/Parcial3-BigData-main/Punto_Productores/consumidorSuperior.py
+          flake8 Parcial3_BigData/Parcial3-BigData-main/Punto_Productores/test_consumidor.py
           flake8 tercerPunto/productor1.py
           flake8 tercerPunto/consumidorInferior.py
           flake8 tercerPunto/productor2.py
