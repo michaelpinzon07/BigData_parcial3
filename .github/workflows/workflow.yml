@@ -32,8 +32,6 @@ jobs:
           pip install virtualenv
           virtualenv env
           source env/bin/activate
-          cd Parcial3-BigData-main/
-          cd Punto_Productores/
           pip install -r requirements.txt
         
       - name: Configure AWS credentials
