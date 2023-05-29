@@ -51,6 +51,7 @@ jobs:
       - name: flake8
         run: |
           source env/bin/activate
+          
           flake8 Parcial3_BigData/Parcial3-BigData-main/Punto_Productores/productor1.py
           flake8 Parcial3_BigData/Parcial3-BigData-main/Punto_Productores/consumidorInferior.py
           flake8 Parcial3_BigData/Parcial3-BigData-main/Punto_Productores/productor2.py
