@@ -7,7 +7,7 @@ precio = []
 
 
 def procesador_records(records):
-    global precio
+    global precio_historial
     for record in records:
         data = record['Data']
         # Decodificar el dato de la secuencia como una cadena
@@ -17,27 +17,26 @@ def procesador_records(records):
         # Obtener el precio de la acción
         precio = data_dict['close']
 
-        precio.append(precio)  # Agregar precio al historial
+        precio_historial.append(precio)  # Agregar precio al historial
 
-        if len(precio) >= 21:
+        if len(precio_historial) >= 21:
 
-            print(precio[:-1])
-            print(len(precio[:-1]))
-            precio_historial_ = precio[:-1]
-            bollinger_inferior = bollingerInf(precio_historial_)
+            print(precio_historial[:-1])
+            print(len(precio_historial[:-1]))
+            precio_historial_ = precio_historial[:-1]
+            bollingerInferior = bollingerInf(precio_historial_)
             print("Precio", precio)
-            print("Bollinger", bollinger_inferior)
+            print("Bollinger", bollingerInferior)
             print("\n\n")
 
-            if precio < bollinger_inferior:
+            if precio < bollingerInferior:
                 # Si el precio está por debajo de la franja inferior
-                generar_alerta(precio, bollinger_inferior)
+                generarAlerta(precio, bollingerInferior)
 
             # Limitar el historial a los últimos 20 precios
-            precio = precio[-20:]
+            precio_historial = precio_historial[-20:]
 
     return precio
-
 
 def bollingerInf(precio):
     bollinger = None
