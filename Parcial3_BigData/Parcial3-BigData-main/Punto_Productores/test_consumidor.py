@@ -18,5 +18,5 @@ def test_process_records():
                   'Data': b'{"date": "2023-05-07", "close": 4721.892604}',
                   'PartitionKey': 'partitionkey'}]
     expected_result = 4721.892604
-    actual_result = process_records(byte_data)
+    actual_result = procesador_records(byte_data)
     assert actual_result == expected_result
