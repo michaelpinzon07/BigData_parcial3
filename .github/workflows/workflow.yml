@@ -56,8 +56,4 @@ jobs:
           flake8 Parcial3_BigData/Parcial3-BigData-main/Punto_Productores/productor2.py
           flake8 Parcial3_BigData/Parcial3-BigData-main/Punto_Productores/consumidorSuperior.py
           flake8 Parcial3_BigData/Parcial3-BigData-main/Punto_Productores/test_consumidor.py
-          flake8 tercerPunto/productor1.py
-          flake8 tercerPunto/consumidorInferior.py
-          flake8 tercerPunto/productor2.py
-          flake8 tercerPunto/consumidorSuperior.py
-          flake8 tercerPunto/test_consumidor.py
+          
