@@ -24,7 +24,7 @@ def procesador_records(records):
             print(precio[:-1])
             print(len(precio[:-1]))
             precio_historial_ = precio[:-1]
-            bollinger_inferior = bollingerInf(precio_historial_)
+            bollinger_inferior = bollinger(precio_historial_)
             print("Precio", precio)
             print("Bollinger", bollinger_inferior)
             print("\n\n")
