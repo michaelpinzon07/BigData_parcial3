@@ -1,4 +1,4 @@
-from consumidorInferior import bollingerInf, process_records
+from consumidorInferior import bollingerInf, procesador_records
 from unittest.mock import patch
 
 
