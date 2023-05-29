@@ -3,7 +3,7 @@ import logging
 from botocore.exceptions import ClientError
 import statistics
 
-precio = []
+precio_historial = []
 
 
 def procesador_records(records):
