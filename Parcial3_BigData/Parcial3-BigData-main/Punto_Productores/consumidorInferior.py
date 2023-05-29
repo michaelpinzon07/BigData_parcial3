@@ -24,7 +24,7 @@ def procesador_records(records):
             print(precio[:-1])
             print(len(precio[:-1]))
             precio_historial_ = precio[:-1]
-            bollinger_inferior = bollinger(precio_historial_)
+            bollinger_inferior = bollingerInf(precio_historial_)
             print("Precio", precio)
             print("Bollinger", bollinger_inferior)
             print("\n\n")
@@ -39,7 +39,7 @@ def procesador_records(records):
     return precio
 
 
-def bollinger(precio):
+def bollingerInf(precio):
     bollinger = None
     if isinstance(precio, list) and len(precio) >= 20:
         mediaMovil = sum(precio[-20:]) / len(precio[-20:])
