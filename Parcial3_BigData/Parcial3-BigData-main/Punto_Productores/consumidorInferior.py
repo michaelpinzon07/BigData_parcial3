@@ -31,7 +31,7 @@ def procesador_records(records):
 
             if precio < bollingerInferior:
                 # Si el precio está por debajo de la franja inferior
-                generarAlerta(precio, bollingerInferior)
+                generar_alerta(precio, bollingerInferior)
 
             # Limitar el historial a los últimos 20 precios
             precio_historial = precio_historial[-20:]
